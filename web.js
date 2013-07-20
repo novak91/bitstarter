@@ -5,6 +5,7 @@ var app = express.createServer(express.logger());
 
 app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/js'));
+app.use(express.static(__dirname + '/img'));
 
 app.get('/', function(request, response) {
     var index_data = fs.readFileSync('index.html');
